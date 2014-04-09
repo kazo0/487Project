@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions 
+xmlns="http://schemas.xmlsoap.org/wsdl/" 
+xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" 
+xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" 
+xmlns:service="http://www.ws-challenge.org/WSC08Services/" 
+targetNamespace="http://www.ws-challenge.org/WSC08Services/"
+xmlns:mece="http://www.vs.uni-kassel.de/mece">
+<!-- Author: Mohamed Takim -->
+<!-- Service W1 -->
+	<service name="W1">
+		<port binding="service:W1Binding" name="W1P">
+			<soap:address location="http://www.ws-challenge.org/W1"/>
+		</port >
+	</service >
+	<binding name="W1Binding" type="service:W1PT">
+		<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="W1op">
+			<soap:operation soapAction ="http://www.ws-challenge.org/W1/W1op" />
+			<input >
+				<soap:body use="literal"/>
+			</input >
+			<output >
+				<soap:body use="literal"/>
+			</output >
+		</operation >
+	</binding >
+
+	<portType name="W1PT">
+		<operation name="W1op">
+			<input message ="service:W1RequestMessage"/>
+			<output message ="service:W1ResponseMessage"/>
+		</operation >
+	</portType >
+
+	<message name="W1RequestMessage">
+		<part element ="service:A" name="AP"/>
+		<part element ="service:B" name="BP"/>
+		<part element ="service:C" name="CP"/>
+	</message >
+	<message name="W1ResponseMessage">
+		<part element ="service:J" name="JP"/>
+	</message >
+
+	<!-- Service W2 -->
+	<service name="W2">
+		<port binding="service:W2Binding" name="W2P">
+			<soap:address location="http://www.ws-challenge.org/W2"/>
+		</port >
+	</service >
+	<binding name="W2Binding" type="service:W2PT">
+		<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="W2op">
+			<soap:operation soapAction ="http://www.ws-challenge.org/W2/W2op" />
+			<input >
+				<soap:body use="literal"/>
+			</input >
+			<output >
+				<soap:body use="literal"/>
+			</output >
+		</operation >
+	</binding >
+
+	<portType name="W2PT">
+		<operation name="W2op">
+			<input message ="service:W2RequestMessage"/>
+			<output message ="service:W2ResponseMessage"/>
+		</operation >
+	</portType >
+
+	<message name="W2RequestMessage">
+		<part element ="service:B" name="BP"/>
+		<part element ="service:C" name="CP"/>
+	</message >
+	<message name="W2ResponseMessage">
+		<part element ="service :E" name="EP"/>
+		<part element ="service:F" name="EP"/>		
+	</message >
+	
+	<!-- Service W3 -->
+	<service name="W3">
+		<port binding="service:W3Binding" name="W3P">
+			<soap:address location="http://www.ws-challenge.org/W3"/>
+		</port >
+	</service >
+	<binding name="W3Binding" type="service:W3PT">
+		<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="W3op">
+			<soap:operation soapAction ="http://www.ws-challenge.org/W3/W3op" />
+			<input >
+				<soap:body use="literal"/>
+			</input >
+			<output >
+				<soap:body use="literal"/>
+			</output >
+		</operation >
+	</binding >
+
+	<portType name="W3PT">
+		<operation name="W3op">
+			<input message ="service:W3RequestMessage"/>
+			<output message ="service:W3ResponseMessage"/>
+		</operation >
+	</portType >
+
+	<message name="W3RequestMessage">
+		<part element ="service:C" name="CP"/>
+		<part element ="service:E" name="EP"/>
+	</message >
+	<message name="W3ResponseMessage">
+		<part element ="service:H" name="HP"/>
+	</message >
+	<!-- Service W4 -->
+	<service name="W4">
+		<port binding="service:W4Binding" name="W4P">
+			<soap:address location="http://www.ws-challenge.org/W4"/>
+		</port >
+	</service >
+	<binding name="W4Binding" type="service:W4PT">
+		<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="W4op">
+			<soap:operation soapAction ="http://www.ws-challenge.org/W4/W4op" />
+			<input >
+				<soap:body use="literal"/>
+			</input >
+			<output >
+				<soap:body use="literal"/>
+			</output >
+		</operation >
+	</binding >
+
+	<portType name="W4PT">
+		<operation name="W4op">
+			<input message ="service:W4RequestMessage"/>
+			<output message ="service:W4ResponseMessage"/>
+		</operation >
+	</portType >
+
+	<message name="W4RequestMessage">
+		<part element ="service:C" name="CP"/>
+		<part element ="service:F" name="FP"/>
+	</message >
+	<message name="W4ResponseMessage">
+		<part element ="service:G" name="GP"/>
+	</message >
+	<!-- Service W5 -->
+	<service name="W5">
+		<port binding="service:W5Binding" name="W5P">
+			<soap:address location="http://www.ws-challenge.org/W5"/>
+		</port >
+	</service >
+	<binding name="W5Binding" type="service:W5PT">
+		<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="W5op">
+			<soap:operation soapAction ="http://www.ws-challenge.org/W5/W5op" />
+			<input >
+				<soap:body use="literal"/>
+			</input >
+			<output >
+				<soap:body use="literal"/>
+			</output >
+		</operation >
+	</binding >
+
+	<portType name="W5PT">
+		<operation name="W5op">
+			<input message ="service:W5RequestMessage"/>
+			<output message ="service:W5ResponseMessage"/>
+		</operation >
+	</portType >
+
+	<message name="W5RequestMessage">
+		<part element ="service:K" name="KP"/>
+	</message >
+	<message name="W5ResponseMessage">
+		<part element ="service:H" name="HP"/>
+	</message >
+	<!-- Service W6 -->
+	<service name="W6">
+		<port binding="service:W6Binding" name="W6P">
+			<soap:address location="http://www.ws-challenge.org/W6"/>
+		</port >
+	</service >
+	<binding name="W6Binding" type="service:W6PT">
+		<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="W6op">
+			<soap:operation soapAction ="http://www.ws-challenge.org/W6/W6op" />
+			<input >
+				<soap:body use="literal"/>
+			</input >
+			<output >
+				<soap:body use="literal"/>
+			</output >
+		</operation >
+	</binding >
+
+	<portType name="W6PT">
+		<operation name="W6op">
+			<input message ="service:W6RequestMessage"/>
+			<output message ="service:W6ResponseMessage"/>
+		</operation >
+	</portType >
+
+	<message name="W6RequestMessage">
+		<part element ="service:J" name="JP"/>
+	</message >
+	<message name="W6ResponseMessage">
+		<part element ="service:C" name="CP"/>
+	</message >
+	<!-- Service W7 -->
+	<service name="W7">
+		<port binding="service:W7Binding" name="W7P">
+			<soap:address location="http://www.ws-challenge.org/W7"/>
+		</port >
+	</service >
+	<binding name="W7Binding" type="service:W7PT">
+		<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="W7op">
+			<soap:operation soapAction ="http://www.ws-challenge.org/W7/W7op" />
+			<input >
+				<soap:body use="literal"/>
+			</input >
+			<output >
+				<soap:body use="literal"/>
+			</output >
+		</operation >
+	</binding >
+
+	<portType name="W7PT">
+		<operation name="W7op">
+			<input message ="service:W7RequestMessage"/>
+			<output message ="service:W7ResponseMessage"/>
+		</operation >
+	</portType >
+
+	<message name="W7RequestMessage">
+		<part element ="service:H" name="HP"/>
+	</message >
+	<message name="W7ResponseMessage">
+		<part element ="service:D" name="DP"/>
+	</message >
+	<!-- Service W8 -->
+	<service name="W8">
+		<port binding="service:W8Binding" name="W8P">
+			<soap:address location="http://www.ws-challenge.org/W8"/>
+		</port >
+	</service >
+	<binding name="W8Binding" type="service:W8PT">
+		<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="W8op">
+			<soap:operation soapAction ="http://www.ws-challenge.org/W8/W8op" />
+			<input >
+				<soap:body use="literal"/>
+			</input >
+			<output >
+				<soap:body use="literal"/>
+			</output >
+		</operation >
+	</binding >
+
+	<portType name="W8PT">
+		<operation name="W8op">
+			<input message ="service:W8RequestMessage"/>
+			<output message ="service:W8ResponseMessage"/>
+		</operation >
+	</portType >
+
+	<message name="W8RequestMessage">
+		<part element ="service:G" name="GP"/>
+	</message >
+	<message name="W8ResponseMessage">
+		<part element ="service:H" name="HP"/>
+	</message >	
+	<!-- Data types -->
+	<types>
+	<xsd:schema targetNamespace="http ://www.ws-challenge.org/WSC08Services/">
+		<xsd:element name="A" type="xsd:string"/>
+		<xsd:element name="B" type="xsd:string"/>
+		<xsd:element name="C" type="xsd:string"/>
+		<xsd:element name="D" type="xsd:string"/>
+		<xsd:element name="E" type="xsd:string"/>
+		<xsd:element name="F" type="xsd:string"/>
+		<xsd:element name="G" type="xsd:string"/>
+		<xsd:element name="H" type="xsd:string"/>			
+		<xsd:element name="K" type="xsd:string"/>		
+		<xsd:element name="J" type="xsd:string"/>	
+     </xsd:schema>		
+	 </types>
+	 
+
+	 <mece:semExtension>
+	<mece:semMessageExt id="W1RequestMessage">
+		<mece:semExt id="A">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instA</mece:ontologyRef >
+		</mece:semExt>
+		<mece:semExt id="B">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instB</mece:ontologyRef >
+		</mece:semExt>	
+				<mece:semExt id="C">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instC</mece:ontologyRef >
+		</mece:semExt>
+	</mece:semMessageExt >
+	
+	<mece:semMessageExt id="W1ResponseMessage">
+		<mece:semExt id="J">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instJ</mece:ontologyRef >
+		</mece:semExt>
+	</mece:semMessageExt >
+	
+	<mece:semMessageExt id="W2RequestMessage">
+		<mece:semExt id="B">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instB</mece:ontologyRef >
+		</mece:semExt>	
+				<mece:semExt id="C">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instC</mece:ontologyRef >
+		</mece:semExt>
+	</mece:semMessageExt >
+	
+	<mece:semMessageExt id="W2ResponseMessage">
+		<mece:semExt id="E">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instE</mece:ontologyRef >
+		</mece:semExt>
+				<mece:semExt id="F">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instF</mece:ontologyRef >
+		</mece:semExt>
+	</mece:semMessageExt >	
+
+	<mece:semMessageExt id="W3RequestMessage">
+		<mece:semExt id="C">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instC</mece:ontologyRef >
+		</mece:semExt>	
+				<mece:semExt id="E">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instE</mece:ontologyRef >
+		</mece:semExt>
+	</mece:semMessageExt >
+	
+	<mece:semMessageExt id="W3ResponseMessage">
+		<mece:semExt id="H">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instH</mece:ontologyRef >
+		</mece:semExt>
+	</mece:semMessageExt >	
+	
+	<mece:semMessageExt id="W4RequestMessage">
+		<mece:semExt id="C">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instC</mece:ontologyRef >
+		</mece:semExt>	
+				<mece:semExt id="F">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instF</mece:ontologyRef >
+		</mece:semExt>
+	</mece:semMessageExt >
+	
+	<mece:semMessageExt id="W4ResponseMessage">
+		<mece:semExt id="G">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instG</mece:ontologyRef >
+		</mece:semExt>
+	</mece:semMessageExt >	
+	
+	<mece:semMessageExt id="W5RequestMessage">
+		<mece:semExt id="K">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instK</mece:ontologyRef >
+		</mece:semExt>	
+	</mece:semMessageExt >
+	
+	<mece:semMessageExt id="W5ResponseMessage">
+		<mece:semExt id="H">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instH</mece:ontologyRef >
+		</mece:semExt>
+	</mece:semMessageExt >	
+	
+	<mece:semMessageExt id="W6RequestMessage">
+		<mece:semExt id="J">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instJ</mece:ontologyRef >
+		</mece:semExt>	
+	</mece:semMessageExt >
+	
+	<mece:semMessageExt id="W6ResponseMessage">
+		<mece:semExt id="C">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instC</mece:ontologyRef >
+		</mece:semExt>
+	</mece:semMessageExt >	
+	
+	<mece:semMessageExt id="W7RequestMessage">
+		<mece:semExt id="H">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instH</mece:ontologyRef >
+		</mece:semExt>	
+	</mece:semMessageExt >
+	
+	<mece:semMessageExt id="W7ResponseMessage">
+		<mece:semExt id="D">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instD</mece:ontologyRef >
+		</mece:semExt>
+	</mece:semMessageExt >	
+		<mece:semMessageExt id="W8RequestMessage">
+		<mece:semExt id="G">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instG</mece:ontologyRef >
+		</mece:semExt>	
+	</mece:semMessageExt >
+	
+	<mece:semMessageExt id="W8ResponseMessage">
+		<mece:semExt id="H">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instH</mece:ontologyRef >
+		</mece:semExt>
+	</mece:semMessageExt >	
+</mece:semExtension >
+</definitions>

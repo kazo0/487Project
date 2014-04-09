@@ -1,0 +1,5 @@
+W1,W2
+W6,W3,W4
+W8,W7
+
+Solution path: [W2, W3, W7]

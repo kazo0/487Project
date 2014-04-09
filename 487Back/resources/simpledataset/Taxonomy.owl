@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns="http://www.ws-challenge.org/wsc08.owl#" xmlns:owl="http://www.w3.org/2002/07/owl#" xml:base="http://www.ws-challenge.org/wsc08.owl">
+<!-- Author: Mohamed Takim -->
+  <owl:Ontology rdf:about="" />
+  
+  <owl:Class rdf:ID="con1"/>
+  <owl:Class rdf:ID="conA">
+		<rdf:subClasssOf rdf:resource="#con1" />
+  </owl:Class>
+ <owl:Class rdf:ID="conB">
+		<rdf:subClasssOf rdf:resource="#con1" />
+  </owl:Class>
+ <owl:Class rdf:ID="conC">
+		<rdf:subClasssOf rdf:resource="#con1" />
+  </owl:Class>
+ <owl:Class rdf:ID="conD">
+		<rdf:subClasssOf rdf:resource="#con1" />
+  </owl:Class>
+ <owl:Class rdf:ID="conE">
+		<rdf:subClasssOf rdf:resource="#con1" />
+  </owl:Class>
+ <owl:Class rdf:ID="conF">
+		<rdf:subClasssOf rdf:resource="#con1" />
+  </owl:Class>
+ <owl:Class rdf:ID="conG">
+		<rdf:subClasssOf rdf:resource="#con1" />
+  </owl:Class>
+ <owl:Class rdf:ID="conH">
+		<rdf:subClasssOf rdf:resource="#con1" />
+  </owl:Class>
+ <owl:Class rdf:ID="conK">
+		<rdf:subClasssOf rdf:resource="#con1" />
+  </owl:Class>
+ <owl:Class rdf:ID="conJ">
+		<rdf:subClasssOf rdf:resource="#con1" />
+  </owl:Class>  
+  
+	<owl:Thing rdf:ID="instA">
+		<rdf:type rdf:resource="#conA" />
+	</owl:Thing>
+	<owl:Thing rdf:ID="instB">
+		<rdf:type rdf:resource="#conB" />
+	</owl:Thing>	
+	<owl:Thing rdf:ID="instC">
+		<rdf:type rdf:resource="#conC" />
+	</owl:Thing>
+	<owl:Thing rdf:ID="instD">
+		<rdf:type rdf:resource="#conD" />
+	</owl:Thing>
+		<owl:Thing rdf:ID="instE">
+		<rdf:type rdf:resource="#conE" />
+	</owl:Thing>
+	<owl:Thing rdf:ID="instF">
+		<rdf:type rdf:resource="#conF" />
+	</owl:Thing>
+		<owl:Thing rdf:ID="instG">
+		<rdf:type rdf:resource="#conG" />
+	</owl:Thing>
+	<owl:Thing rdf:ID="instH">
+		<rdf:type rdf:resource="#conH" />
+	</owl:Thing>
+	<owl:Thing rdf:ID="instK">
+		<rdf:type rdf:resource="#conK" />
+	</owl:Thing>
+	<owl:Thing rdf:ID="instJ">
+		<rdf:type rdf:resource="#conJ" />
+	</owl:Thing>	
+</rdf:RDF>  

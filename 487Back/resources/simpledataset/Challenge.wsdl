@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions 
+xmlns="http://schemas.xmlsoap.org/wsdl/" 
+xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" 
+xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" 
+xmlns:service="http://www.ws-challenge.org/WSC08Services/" 
+targetNamespace="http://www.ws-challenge.org/WSC08Services/"
+xmlns:mece="http://www.vs.uni-kassel.de/mece">
+<!-- Author: Mohamed Takim -->
+ 	<!-- Service WCQ -->
+	<service name="WCQ">
+		<port binding="service:WCQBinding" name="WCQP">
+			<soap:address location="http://www.ws-challenge.org/WCQ"/>
+		</port >
+	</service >
+	<binding name="WCQBinding" type="service:WCQPT">
+		<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="WCQop">
+			<soap:operation soapAction ="http://www.ws-challenge.org/WCQ/WCQop" />
+			<input >
+				<soap:body use="literal"/>
+			</input >
+			<output >
+				<soap:body use="literal"/>
+			</output >
+		</operation >
+	</binding >
+
+	<portType name="WCQPT">
+		<operation name="WCQop">
+			<input message ="service:WCQRequestMessage"/>
+			<output message ="service:WCQResponseMessage"/>
+		</operation >
+	</portType >
+
+	<message name="WCQRequestMessage">
+		<part element ="service:A" name="AP"/>
+		<part element ="service:B" name="BP"/>
+		<part element ="service:C" name="CP"/>
+	</message >
+	<message name="WCQResponseMessage">
+		<part element ="service:D" name="DP"/>
+	</message >	
+	<!-- Data types -->
+	<types>
+	<xsd:schema targetNamespace="http://www.ws-challenge.org/WSC08Services/" >
+		<xsd:element name="A" type="xsd :string "/>
+		<xsd:element name="B" type="xsd :string "/>	
+		<xsd:element name="C" type="xsd :string "/>
+		<xsd:element name="D" type="xsd :string "/>	
+	</xsd:schema>		
+	 </types>
+	 
+  <mece:semExtension>
+		<mece:semMessageExt id="WCQRequestMessage">
+		<mece:semExt id="A">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instA</mece:ontologyRef >
+		</mece:semExt >	
+		<mece:semExt id="B">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instB</mece:ontologyRef >
+		</mece:semExt >	
+				<mece:semExt id="C">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instC</mece:ontologyRef >
+		</mece:semExt >	
+	</mece:semMessageExt >
+	
+	<mece:semMessageExt id="WCQResponseMessage">
+		<mece:semExt id="D">
+			<mece:ontologyRef >http://www.ws-challenge.org/wsc08.owl#instD</mece:ontologyRef >
+		</mece:semExt >
+	</mece:semMessageExt >	
+  </mece:semExtension>
+</definitions>
+
